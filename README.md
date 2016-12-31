@@ -1,5 +1,7 @@
 # VDN - valid domain name
 
+[![GoDoc](https://godoc.org/github.com/simon-xia/vdn?status.png)](https://godoc.org/github.com/simon-xia/vdn)
+
 VDN(valid domain name) is used to check if s string is a valid domain name
 
 # Criteria
@@ -17,7 +19,7 @@ A complete domain name is valid if it meets the following criteria:
 
 - [ ] unicode check
 
-# ref
+# Ref
 
 [rfc1035](https://tools.ietf.org/html/rfc1035)
 
