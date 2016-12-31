@@ -1,13 +1,14 @@
 package vdn
 
 // rfc1035 2.3.4. Size limits
+// https://tools.ietf.org/html/rfc1035#section-2.3.4
 const (
 	maxLableSize  = 63
 	maxDomainSize = 254
 	minPartCnt    = 2
 )
 
-// IsValidDomain check whether a domain is valid
+// IsValidDomain checks if s string is a valid domain name
 // https://tools.ietf.org/html/rfc1035
 // https://tools.ietf.org/html/rfc3696
 func IsValidDomain(s string) bool {
@@ -45,7 +46,7 @@ func IsValidDomain(s string) bool {
 				return false
 			}
 			if partCnt == 1 {
-				if _, ok := TLDs[s[i+1:]]; !ok {
+				if _, ok := tlds[s[i+1:]]; !ok {
 					return false
 				}
 			}
@@ -61,3 +62,9 @@ func IsValidDomain(s string) bool {
 
 	return ok
 }
+
+// TODO:
+// https://tools.ietf.org/html/rfc5890
+// func IsValidDomainUnicode(s string) bool {
+// 	  return true
+// }

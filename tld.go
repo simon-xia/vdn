@@ -2,7 +2,7 @@ package vdn
 
 // top-level domain list
 // ref: https://www.iana.org/domains/root/db
-var TLDs = map[string]struct{}{
+var tlds = map[string]struct{}{
 	"aaa":                struct{}{},
 	"aarp":               struct{}{},
 	"abarth":             struct{}{},
